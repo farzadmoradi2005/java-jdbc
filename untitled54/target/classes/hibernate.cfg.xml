@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- آدرس اتصال به دیتابیس -->
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5432/test
+        </property>
+
+        <!-- نام کاربری دیتابیس -->
+        <property name="hibernate.connection.username">
+            postgres
+        </property>
+
+        <!-- رمز عبور دیتابیس -->
+        <property name="hibernate.connection.password">
+            Fa2091384!
+        </property>
+
+        <!-- درایور JDBC مخصوص PostgreSQL -->
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+
+        <!-- دیالکت Hibernate برای PostgreSQL -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+
+        <!-- نمایش کوئری‌ها در کنسول -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- ساخت/آپدیت خودکار جدول‌ها -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+
+    </session-factory>
+</hibernate-configuration>
